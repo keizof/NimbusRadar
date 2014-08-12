@@ -37,7 +37,7 @@ namespace NimbusRadar
                         .TileContentFactory.CreateTileSquare150x150Image();
 
             tile.Branding = NotificationsExtensions.TileContent.TileBranding.None;
-            tile.Image.Src = YahooMapAPI.GenerateStaticMapURL(150, 150, 35.681093831866455, 139.76716278230535, 8);
+            tile.Image.Src = BackgroundTasks.YahooMapAPI.GenerateStaticMapURL(150, 150, 35.681093831866455, 139.76716278230535, 8);
 
             return tile;
         }
@@ -50,7 +50,7 @@ namespace NimbusRadar
                         .TileContentFactory.CreateTileWide310x150Image();
 
             tile.Branding = NotificationsExtensions.TileContent.TileBranding.None;
-            tile.Image.Src = YahooMapAPI.GenerateStaticMapURL(310, 150, 35.681093831866455, 139.76716278230535, 8);
+            tile.Image.Src = BackgroundTasks.YahooMapAPI.GenerateStaticMapURL(310, 150, 35.681093831866455, 139.76716278230535, 8);
 
             return tile;
         }
@@ -63,7 +63,7 @@ namespace NimbusRadar
                         .TileContentFactory.CreateTileSquare310x310Image();
 
             tile.Branding = NotificationsExtensions.TileContent.TileBranding.None;
-            tile.Image.Src = YahooMapAPI.GenerateStaticMapURL(310, 310, 35.681093831866455, 139.76716278230535, 8);
+            tile.Image.Src = BackgroundTasks.YahooMapAPI.GenerateStaticMapURL(310, 310, 35.681093831866455, 139.76716278230535, 8);
 
             return tile;
         }

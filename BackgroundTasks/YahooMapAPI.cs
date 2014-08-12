@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NimbusRadar
+namespace BackgroundTasks
 {
-    class YahooMapAPI
+    public class YahooMapAPI
     {
         public static string ApplicationID = <Place your app id>;
 

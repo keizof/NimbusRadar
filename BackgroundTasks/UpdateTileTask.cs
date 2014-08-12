@@ -23,11 +23,11 @@ namespace BackgroundTasks
                   .CreateTileUpdaterForApplication();
 
             var tile310x310 = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare310x310Image);
-            tile310x310.GetElementsByTagName("image")[0].Attributes.GetNamedItem("src").InnerText = NimbusRadar.YahooMapAPI.GenerateStaticMapURL(310, 310, 35.681093831866455, 139.76716278230535, 8);
+            tile310x310.GetElementsByTagName("image")[0].Attributes.GetNamedItem("src").InnerText = YahooMapAPI.GenerateStaticMapURL(310, 310, 35.681093831866455, 139.76716278230535, 8);
             var tile310x150 = TileUpdateManager.GetTemplateContent(TileTemplateType.TileWide310x150Image);
-            tile310x150.GetElementsByTagName("image")[0].Attributes.GetNamedItem("src").InnerText = NimbusRadar.YahooMapAPI.GenerateStaticMapURL(310, 150, 35.681093831866455, 139.76716278230535, 8);
+            tile310x150.GetElementsByTagName("image")[0].Attributes.GetNamedItem("src").InnerText = YahooMapAPI.GenerateStaticMapURL(310, 150, 35.681093831866455, 139.76716278230535, 8);
             var tile150x150 = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150Image);
-            tile150x150.GetElementsByTagName("image")[0].Attributes.GetNamedItem("src").InnerText = NimbusRadar.YahooMapAPI.GenerateStaticMapURL(150, 150, 35.681093831866455, 139.76716278230535, 8);
+            tile150x150.GetElementsByTagName("image")[0].Attributes.GetNamedItem("src").InnerText = YahooMapAPI.GenerateStaticMapURL(150, 150, 35.681093831866455, 139.76716278230535, 8);
 
             // Clear previously set tiles
             tileUpdater.Clear();
