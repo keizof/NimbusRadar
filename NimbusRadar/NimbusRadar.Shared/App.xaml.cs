@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.ApplicationModel.Background;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,6 +26,9 @@ namespace NimbusRadar
     /// </summary>
     public sealed partial class App : Application
     {
+        string taskName = "UpdateTileTask";
+        private const string taskEntryPoint = "BackgroundTasks.UpdateTileTask";
+
 #if WINDOWS_PHONE_APP
         private TransitionCollection transitions;
 #endif
@@ -103,6 +107,9 @@ namespace NimbusRadar
 
             // Ensure the current window is active
             Window.Current.Activate();
+
+            // Register background task for updating live tile
+            this.RegisterBackgroundTask();
         }
 
 #if WINDOWS_PHONE_APP
@@ -132,6 +139,28 @@ namespace NimbusRadar
 
             // TODO: Save application state and stop any background activity
             deferral.Complete();
+        }
+
+        private async void RegisterBackgroundTask()
+        {
+            var backgroundAccessStatus = await BackgroundExecutionManager.RequestAccessAsync();
+            if (backgroundAccessStatus == BackgroundAccessStatus.AllowedMayUseActiveRealTimeConnectivity ||
+                backgroundAccessStatus == BackgroundAccessStatus.AllowedWithAlwaysOnRealTimeConnectivity)
+            {
+                foreach (var task in BackgroundTaskRegistration.AllTasks)
+                {
+                    if (task.Value.Name == taskName)
+                    {
+                        task.Value.Unregister(true);
+                    }
+                }
+
+                BackgroundTaskBuilder taskBuilder = new BackgroundTaskBuilder();
+                taskBuilder.Name = taskName;
+                taskBuilder.TaskEntryPoint = taskEntryPoint;
+                taskBuilder.SetTrigger(new TimeTrigger(15, false));
+                var registration = taskBuilder.Register();
+            }
         }
     }
 }

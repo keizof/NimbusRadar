@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NimbusRadar.Windows", "Nimb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NimbusRadar.WindowsPhone", "NimbusRadar\NimbusRadar.WindowsPhone\NimbusRadar.WindowsPhone.csproj", "{6A4993B1-4AC8-4E6E-A566-3483EBDFC364}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundTasks", "BackgroundTasks\BackgroundTasks.csproj", "{22BB1066-923C-4902-87E3-2F9168233BA1}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		NimbusRadar\NimbusRadar.Shared\NimbusRadar.Shared.projitems*{eb895867-c9b1-41df-b8cc-837f01435889}*SharedItemsImports = 13
@@ -72,6 +74,16 @@ Global
 		{6A4993B1-4AC8-4E6E-A566-3483EBDFC364}.Release|x86.ActiveCfg = Release|x86
 		{6A4993B1-4AC8-4E6E-A566-3483EBDFC364}.Release|x86.Build.0 = Release|x86
 		{6A4993B1-4AC8-4E6E-A566-3483EBDFC364}.Release|x86.Deploy.0 = Release|x86
+		{22BB1066-923C-4902-87E3-2F9168233BA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22BB1066-923C-4902-87E3-2F9168233BA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22BB1066-923C-4902-87E3-2F9168233BA1}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{22BB1066-923C-4902-87E3-2F9168233BA1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{22BB1066-923C-4902-87E3-2F9168233BA1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{22BB1066-923C-4902-87E3-2F9168233BA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22BB1066-923C-4902-87E3-2F9168233BA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22BB1066-923C-4902-87E3-2F9168233BA1}.Release|ARM.ActiveCfg = Release|Any CPU
+		{22BB1066-923C-4902-87E3-2F9168233BA1}.Release|x64.ActiveCfg = Release|Any CPU
+		{22BB1066-923C-4902-87E3-2F9168233BA1}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
