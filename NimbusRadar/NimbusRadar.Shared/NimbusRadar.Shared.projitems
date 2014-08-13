@@ -16,6 +16,5 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)LiveTiles.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)YahooMapAPI.cs" />
   </ItemGroup>
 </Project>
