@@ -8,6 +8,6 @@
     mc:Ignorable="d" Loaded="Page_Loaded">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <WebView x:Name="YahooJSMapWebView" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        <WebView x:Name="YahooJSMapWebView" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ScriptNotify="ScriptNotify"/>
     </Grid>
 </Page>
